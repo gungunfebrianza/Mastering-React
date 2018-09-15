@@ -13,8 +13,8 @@
     "nodemon": "^1.18.4"
   },
   "scripts": {
-    "start": "nodemon lib/class-property-method.js --exec babel-node --presets es2015,stage-2",
-    "build": "babel lib -d dist --presets es2015,stage-2",
+    "start": "nodemon lib/class-property-method.js --exec babel-node",
+    "build": "babel lib -d dist",
     "serve": "node dist/class-property-method.js"
   },
   "author": "",
