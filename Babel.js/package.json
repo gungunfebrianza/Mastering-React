@@ -10,12 +10,16 @@
   },
   "devDependencies": {
     "babel-preset-latest": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "coffeescript": "^2.3.1",
+    "mocha": "^5.2.0",
     "nodemon": "^1.18.4"
   },
   "scripts": {
     "start": "nodemon lib/class-property-method.js --exec babel-node",
     "build": "babel lib -d dist",
-    "serve": "node dist/class-property-method.js"
+    "serve": "node dist/class-property-method.js",
+    "test" : "mocha --require babel-core/register"
   },
   "author": "",
   "license": "ISC"
