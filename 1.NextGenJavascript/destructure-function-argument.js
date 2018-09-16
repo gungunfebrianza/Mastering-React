@@ -1,4 +1,4 @@
 const printName = ({name}) => {
   console.log(name);
 }
-printName({name: 'Max', age: 28});
+printName({name: 'Max', age: 28}); // prints 'Max' 
