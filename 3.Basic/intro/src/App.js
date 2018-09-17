@@ -4,16 +4,26 @@ import './App.css';
 import Person from './Person/Person.js';
 
 class App extends Component {
+  state = {
+    persons: [
+      {name: "Gun", age: 26},
+      {name: "Nowo", age: 24},
+      {name: "Christa", age: 48},
+    ]
+  }
+
+  switchNameHandler = () => {
+    console.log('was clicked!');
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-          <Person name="gun" age="20" >Test</Person>
-          <Person name="nowo" age="23"/>
-          <Person name="christa" age="22"/>
-        </header>
+        <h1 className="App-title">Welcome to React</h1>
+        <button onClick={this.switchNameHandler}>Switch Name</button>
+        <Person name={this.state.persons[0].name} age={this.state.persons[0].age} >Test</Person>
+        <Person name={this.state.persons[1].name} age={this.state.persons[1].age}/>
+        <Person name={this.state.persons[2].name} age={this.state.persons[2].age}/>
       </div>
     );
 
