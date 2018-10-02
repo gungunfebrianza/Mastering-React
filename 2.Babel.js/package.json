@@ -19,7 +19,7 @@
     "start": "nodemon lib/class-property-method.js --exec babel-node",
     "build": "babel lib -d dist",
     "serve": "node dist/class-property-method.js",
-    "test" : "mocha --require babel-core/register"
+    "test": "mocha --require babel-core/register"
   },
   "author": "",
   "license": "ISC"

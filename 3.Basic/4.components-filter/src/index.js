@@ -1,12 +1,37 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import Header from './components/Header';
+import NewsList from './components/News-List';
+import JSON from './db.json';
+
+class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      news: JSON,
+      filtered: JSON
+    };
+  }
+
+  filterNews(keywords) {
+    let filtered = this.state.news.filter(item => {
+      return item.title.indexOf(keywords); // Return New Array
+    });
+    console.log(filtered);
+
+    this.setState({ filtered: filtered });
+  }
+
+  render() {
+    return (
+      <div>
+        <Header newsSearch={keywords => this.filterNews(keywords)} />
+        <NewsList news={this.state.filtered} />
+      </div>
+    );
+  }
+}
 
 ReactDOM.render(<App />, document.getElementById('root'));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();

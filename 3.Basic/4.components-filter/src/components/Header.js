@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
 class Header extends Component {
-  constructor(props) {
+  constructor() {
     // Access Parent Component
-    super(props);
+    super();
 
     // State is an object
     this.state = {
@@ -12,19 +12,10 @@ class Header extends Component {
     };
   }
 
-  // Event Function Read Attribute
-  readAttributeName(e) {
-    console.log(e.target.name);
-  }
-
-  // Event Input Change Function Read Value
-  readInputChange(e) {
-    console.log(e.target.value);
-  }
-
   // How to Change State
   changeStateKeyword(e) {
     this.setState({ keywords: e.target.value });
+    this.props.newsSearch(e.target.value);
   }
 
   // Render
