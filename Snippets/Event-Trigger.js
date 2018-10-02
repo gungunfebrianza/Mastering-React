@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 
 class Header extends Component {
-  read(e) {}
+  readAttributeName(e) {
+    console.log(e.target.name);
+  }
+
+  readInputChange(e) {
+    console.log(e.target.value);
+  }
 
   render() {
     const styles = {
@@ -24,12 +30,7 @@ class Header extends Component {
         >
           Logo
         </div>
-        <input
-          onInput={evt => {
-            console.log(evt.target.value);
-          }}
-          type="text"
-        />
+        <input onInput={this.readInputChange} name="Test" type="text" />
       </header>
     );
   }
