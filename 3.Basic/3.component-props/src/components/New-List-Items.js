@@ -4,11 +4,7 @@ const NewsItem = ({ item }) => {
   //console.log(item);
 
   return (
-    <div
-      key={
-        item.id // Must have a key for looping
-      }
-    >
+    <div className="news_item">
       <h3>{item.title}</h3>
       <div>{item.feed}</div>
     </div>
