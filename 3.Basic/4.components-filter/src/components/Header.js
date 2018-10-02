@@ -31,11 +31,17 @@ class Header extends Component {
   render() {
     const styles = {
       header: {
-        background: '#03a9f4'
+        background: '#03a9f4',
+        textAlign: 'center'
       },
       logo: {
         color: '#fff',
+        fontSize: '40px',
         textAlign: 'center'
+      },
+      input: {
+        fontSize: '20px',
+        margin: '20px 0px'
       }
     };
 
@@ -53,9 +59,8 @@ class Header extends Component {
           onInput={this.changeStateKeyword.bind(this)} //this mean this class header
           name="Test"
           type="text"
+          style={styles.input}
         />
-        <div>{this.state.title}</div>
-        <div>{this.state.keywords}</div>
       </header>
     );
   }
