@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Link } from 'react-router-dom';
 // Components
 import Posts from './components/Posts';
 import Profile from './components/Profile';
+import PostsItem from './components/Posts_Item';
 
 class App extends Component {
   render() {
@@ -26,6 +27,7 @@ ReactDOM.render(
       <Route exact path="/" component={App} />
       <Route path="/posts" component={Posts} />
       <Route path="/profile" component={Profile} />
+      <Route path="/posts/:id" component={PostsItem} />
     </section>
   </BrowserRouter>,
   document.getElementById('root')
