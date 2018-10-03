@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import { BrowserRouter, Route } from 'react-router-dom';
+
+// Components
+import Posts from './components/Posts';
+import Profile from './components/Profile';
 
 class App extends Component {
   render() {
@@ -8,4 +12,12 @@ class App extends Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <BrowserRouter>
+    <section>
+      <Route path="/post" component={Posts} />
+      <Route path="/profile" component={Profile} />
+    </section>
+  </BrowserRouter>,
+  document.getElementById('root')
+);
