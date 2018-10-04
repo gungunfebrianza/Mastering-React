@@ -4,10 +4,14 @@ import './index.css';
 import Lifecycle from './lifecycle';
 
 const App = () => {
+  const objectProps = {
+    a: 'a',
+    b: 'b'
+  };
   return (
     <div>
       <h1>Hello World</h1>
-      <Lifecycle />
+      <Lifecycle testProps={objectProps} />
     </div>
   );
 };

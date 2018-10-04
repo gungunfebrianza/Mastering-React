@@ -32,15 +32,20 @@ export default class Lifecycle extends Component {
     return true; // Title Will Changed
   }
 
+  componentWillReceiveProps() {
+    console.log('Receive Props');
+  }
+
   //4. Render
   render() {
     return (
       <div>
         <h4>{this.state.title}</h4>
         <span>{this.state.body}</span>
-        <p onClick={() => this.setState({ title: 'Title Changed!' })}>
+        <p onClick={() => this.setState({ title: 'Title s Changed!' })}>
           Click to Change
         </p>
+        <p onClick={() => this.props.testProps.b}>AAA</p>
       </div>
     );
   }
@@ -48,5 +53,9 @@ export default class Lifecycle extends Component {
   componentDidMount() {
     console.log('Execute After Component Render');
     document.querySelector('h4').style.color = 'red';
+  }
+
+  componentWillUnmount() {
+    console.log('UNMOUNT!!');
   }
 }
