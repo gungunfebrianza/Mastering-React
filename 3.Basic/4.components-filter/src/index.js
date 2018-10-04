@@ -17,11 +17,11 @@ class App extends Component {
 
   filterNews(keywords) {
     let filtered = this.state.news.filter(item => {
-      return item.title.indexOf(keywords); // Return New Array
+      // Return New Array if title contain specific keywords and -1 is no keyword
+      return item.title.indexOf(keywords) !== -1;
     });
-    console.log(filtered);
 
-    this.setState({ filtered: filtered });
+    this.setState({ filtered });
   }
 
   render() {

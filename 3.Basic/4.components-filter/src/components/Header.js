@@ -1,20 +1,8 @@
 import React, { Component } from 'react';
 
 class Header extends Component {
-  constructor() {
-    // Access Parent Component
-    super();
-
-    // State is an object
-    this.state = {
-      title: 'The Keywords are : ',
-      keywords: 'john'
-    };
-  }
-
   // How to Change State
   changeStateKeyword(e) {
-    this.setState({ keywords: e.target.value });
     this.props.newsSearch(e.target.value);
   }
 
