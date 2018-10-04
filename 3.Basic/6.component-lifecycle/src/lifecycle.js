@@ -17,12 +17,30 @@ export default class Lifecycle extends Component {
     console.log('Before Component Render');
   }
 
+  componentWillUpdate() {
+    console.log('Before Get Update');
+  }
+
+  componentDidUpdate() {
+    console.log('After Update');
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    if (nextState.title === 'Title Changed!') {
+      return false; // Title will not Changed
+    }
+    return true; // Title Will Changed
+  }
+
   //4. Render
   render() {
     return (
       <div>
         <h4>{this.state.title}</h4>
         <span>{this.state.body}</span>
+        <p onClick={() => this.setState({ title: 'Title Changed!' })}>
+          Click to Change
+        </p>
       </div>
     );
   }
