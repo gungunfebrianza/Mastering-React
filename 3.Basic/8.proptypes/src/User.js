@@ -16,10 +16,14 @@ export default class User extends Component {
 }
 
 User.propTypes = {
-  name: PropTypes.string,
+  //name: PropTypes.string,
   age: PropTypes.number,
-  hobbies: PropTypes.array,
+  //hobbies: PropTypes.array,
   gay: PropTypes.bool,
   message: PropTypes.func,
-  you: PropTypes.object
+  you: PropTypes.object,
+  //name: PropTypes.oneOf(['francis', 'gun'])
+  name: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  hobbies: PropTypes.arrayOf(PropTypes.string),
+  
 };
