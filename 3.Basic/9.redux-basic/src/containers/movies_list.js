@@ -10,19 +10,20 @@ class MoviesList extends Component {
   renderList = movies => {
     if (movies)
       return movies.map(movie => {
-        return <div>{movie.name}</div>;
+        return <div key={movie.id}>{movie.name}</div>;
       });
   };
 
   render() {
-    return <div className="App">{this.renderList(this.props.movies)}</div>;
+    return (
+      <div className="App">{this.renderList(this.props.moviesReducer)}</div>
+    );
   }
 }
 
 function mapStateToProps(state) {
-  return {
-    movies: state.movies
-  };
+  console.log(state);
+  return { moviesReducer: state.moviesReducer };
 }
 export default connect(
   mapStateToProps,
