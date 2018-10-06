@@ -14,7 +14,7 @@ class Search extends Component {
 
   searchCars = event => {
     event.preventDefault();
-    console.log(this.state);
+    this.props.getCars(this.state.keyword);
   };
 
   handleOnChange = event => {

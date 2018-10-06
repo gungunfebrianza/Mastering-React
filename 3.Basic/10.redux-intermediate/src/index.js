@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
+import promiseMiddleware from 'redux-promise';
 import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
 import rootReducers from './reducers';
@@ -10,7 +11,7 @@ import rootReducers from './reducers';
 import App from './components/App';
 import Car from './components/Car';
 
-const reduxStore = applyMiddleware()(createStore);
+const reduxStore = applyMiddleware(promiseMiddleware)(createStore);
 
 ReactDOM.render(
   <Provider store={reduxStore(rootReducers)}>
