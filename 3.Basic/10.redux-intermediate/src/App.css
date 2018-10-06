@@ -21,3 +21,28 @@ body {
 .main_search input:focus {
   outline: none;
 }
+
+.car_item {
+  display: flex;
+  border: 1px solid lightgray;
+  margin: 10px;
+}
+
+.car_item .left {
+  width: 100px;
+}
+
+.car_item .left img {
+  width: 100%;
+}
+
+.car_item .right {
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.car_item .right h4,
+.car_item .right h4 {
+  margin: 0px;
+  
+}
