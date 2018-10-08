@@ -10,3 +10,14 @@ export function getCars(kyw) {
     payload: request
   };
 }
+
+export function carDetail(id) {
+  const request = fetch(`${ROOT_URL}/carsIndex?id=${id}`, {
+    method: 'GET'
+  }).then(response => response.json());
+  console.log(requset);
+  return {
+    type: 'CAR_DETAIL',
+    payload: request
+  };
+}

@@ -9,7 +9,7 @@ import rootReducers from './reducers';
 
 // Component
 import App from './components/App';
-import Car from './components/Car';
+import Car from './containers/Car';
 
 const reduxStore = applyMiddleware(promiseMiddleware)(createStore);
 
