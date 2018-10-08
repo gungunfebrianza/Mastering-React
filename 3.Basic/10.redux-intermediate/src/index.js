@@ -2,24 +2,28 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import promiseMiddleware from 'redux-promise';
 import { BrowserRouter, Route } from 'react-router-dom';
+import promiseMiddleware from 'redux-promise';
 import './App.css';
-import rootReducers from './reducers';
 
-// Component
+// COMPONENTS
 import App from './components/App';
 import Car from './containers/Car';
 
-const reduxStore = applyMiddleware(promiseMiddleware)(createStore);
+// REDUCERS
+import reducers from './reducers';
+
+const createStoreWithMiddleware = applyMiddleware(promiseMiddleware)(
+  createStore
+);
 
 ReactDOM.render(
-  <Provider store={reduxStore(rootReducers)}>
+  <Provider store={createStoreWithMiddleware(reducers)}>
     <BrowserRouter>
-      <section>
+      <div>
         <Route exact path="/" component={App} />
-        <Route path="/car/:id" component={Car} />
-      </section>
+        <Route exact path="/car/:id" component={Car} />
+      </div>
     </BrowserRouter>
   </Provider>,
   document.getElementById('root')

@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 
-// Component
 import Search from '../containers/Search';
-import ListCars from '../containers/ListCars';
+import ListOfCars from '../containers/list_of_cars';
 
-export default class App extends Component {
+class App extends Component {
   render() {
     return (
       <div className="App">
         <Search />
-        <ListCars />
+        <ListOfCars />
       </div>
     );
   }
 }
+
+export default App;

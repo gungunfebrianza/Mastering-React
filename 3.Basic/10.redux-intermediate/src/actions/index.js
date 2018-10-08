@@ -1,23 +1,27 @@
-const ROOT_URL = 'http://localhost:3004';
+const URL_ROOT = 'http://localhost:3004';
 
-export function getCars(kyw) {
-  const request = fetch(`${ROOT_URL}/carsIndex?q=${kyw}`, {
+export function getCars(keywords) {
+  const request = fetch(`${URL_ROOT}/carsIndex?q=${keywords}`, {
+    method: 'GET'
+  }).then(response => response.json());
+
+  return { type: 'SEARCH_CARS', payload: request };
+}
+
+export function carDetail(id) {
+  const request = fetch(`${URL_ROOT}/carsIndex?id=${id}`, {
     method: 'GET'
   }).then(response => response.json());
 
   return {
-    type: 'SEARCH_CARS',
+    type: 'CAR_DETAIL',
     payload: request
   };
 }
 
-export function carDetail(id) {
-  const request = fetch(`${ROOT_URL}/carsIndex?id=${id}`, {
-    method: 'GET'
-  }).then(response => response.json());
-  console.log(requset);
+export function clearDetail() {
   return {
-    type: 'CAR_DETAIL',
-    payload: request
+    type: 'CLEAR_DETAIL',
+    payload: []
   };
 }

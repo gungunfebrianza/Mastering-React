@@ -17,7 +17,7 @@ class Search extends Component {
     this.props.getCars(this.state.keyword);
   };
 
-  handleOnChange = event => {
+  handleChange = event => {
     this.setState({
       keyword: event.target.value
     });
@@ -29,21 +29,21 @@ class Search extends Component {
 
   render() {
     return (
-      <section className="main_search">
+      <div className="main_search">
         <form onSubmit={this.searchCars}>
           <input
             type="text"
             value={this.state.keyword}
-            onChange={this.handleOnChange}
+            onChange={this.handleChange}
           />
         </form>
-      </section>
+      </div>
     );
   }
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ getCars }, dispatch);
+  return bindActionCreators({ getCars: getCars }, dispatch);
 }
 
 export default connect(
