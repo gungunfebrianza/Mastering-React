@@ -1,0 +1,21 @@
+.btn {
+  padding: 15px;
+  margin: 10px;
+  background-color: #fff;
+  border: 2px solid lightgray;
+}
+
+.btn.success {
+  background-color: green;
+  color: #fff;
+}
+
+.btn.info {
+  background-color: blue;
+  color: #fff;
+}
+
+.btn.danger {
+  background-color: red;
+  color: #fff;
+}
