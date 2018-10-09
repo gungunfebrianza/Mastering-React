@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Logo = props => {
   return (
@@ -8,8 +9,12 @@ const Logo = props => {
   );
 };
 
-Logo.defaultProps = {
-  title: 'Home'
+// Logo.defaultProps = {
+//   title: 'Home'
+// };
+
+Logo.propTypes = {
+  title: PropTypes.string
 };
 
 export default Logo;
