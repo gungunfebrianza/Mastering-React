@@ -8,4 +8,8 @@ const Logo = props => {
   );
 };
 
+Logo.defaultProps = {
+  title: 'Home'
+};
+
 export default Logo;

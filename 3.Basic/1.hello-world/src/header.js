@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header id="header">
       <div className="container">
-        <Logo title="My React App" />
+        <Logo />
         <Navigation />
       </div>
     </header>
