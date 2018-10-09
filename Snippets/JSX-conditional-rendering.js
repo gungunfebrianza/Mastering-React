@@ -1,19 +1,36 @@
 import React from 'react';
-import './Message.css';
 
-class Message extends React.Component {
-  render() {
-    let message;
-    let today = new Date().getDay();
+const Navigation = () => {
+  let isLoggedIn = true;
 
-    if (today == 0) {
-      message = <div className="sorry">We are closed on Sunday...</div>;
-    } else {
-      message = <div className="happy">How can we help you?</div>;
-    }
-
-    return message;
+  if (isLoggedIn) {
+    return (
+      <div className="nav">
+        <nav>
+          <ul>
+            <li>
+              <a href="#">Home</a>
+              <a href="#">About</a>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    );
+  } else {
+    return (
+      <div className="nav">
+        <nav>
+          <ul>
+            <li>
+              <a href="#">Sign Up</a>
+              <a href="#">Log In</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    );
   }
-}
+};
 
-export default Message;
+export default Navigation;
