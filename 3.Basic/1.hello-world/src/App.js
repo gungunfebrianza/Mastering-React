@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 import './App.css';
 import Greet from './Greet';
 import Header from './header';
+import Childern from './Childern';
 
 class App extends Component {
   render() {
     return (
       <div>
         <Header />
-        Hello World
-        <Greet />
+        <Childern>
+          <Greet />
+        </Childern>
       </div>
     );
   }

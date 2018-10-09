@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Logo = () => {
+const Logo = props => {
   return (
     <div className="logo">
-      <a href="#">Logo</a>
+      <a href="#">{props.title}</a>
     </div>
   );
 };
