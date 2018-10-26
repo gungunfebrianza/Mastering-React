@@ -5,7 +5,9 @@
 #Content Table
 
 <ul>
- <li>1. Learn Next Generation Javascript</li></ul>
+ <li>1. Learn Next Generation Javascript</li>
+ <li>2. Why Babel.js?</li>
+</ul>
 
 ---------------------------------------------------------------------------------------------------------------------------------
 MIT License
