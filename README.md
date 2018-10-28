@@ -7,6 +7,7 @@
 <ul>
  <li>1. Learn Next Generation Javascript</li>
  <li>2. Why Babel.js?</li>
+ <li>3. Basic React Applications</li>
 </ul>
 
 ---------------------------------------------------------------------------------------------------------------------------------
