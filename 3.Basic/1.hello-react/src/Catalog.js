@@ -1,11 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
+import './Catalog.css';
+import ProductList from './ProductList';
 
-export default class Catalog extends Component {
+class Catalog extends React.Component {
   render() {
-    return (
-      <div>
-        <p>Catalog</p>
-      </div>
-    );
+    return <div>
+      <h2>Catalog</h2>
+      <ProductList />
+    </div>;
   }
 }
+
+export default Catalog;
