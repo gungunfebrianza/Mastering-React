@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>React Application</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <style>
+      #container {
+        padding: 50px;
+        background-color: #eee;
+      }
+
+      #container h1 {
+        font-size: 144px;
+        font-family: sans-serif;
+        color: #0080a8;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container"></div>
+    <script type="text/babel">
+      var destination = document.querySelector('#container');
+      ReactDOM.render(
+        <div>
+          <h1>Batman</h1>
+          <h1>Iron Man</h1>
+          <h1>Nicolas Cage</h1>
+          <h1>Mega Man</h1>
+        </div>,
+        destination
+      );
+    </script>
+  </body>
+</html>
