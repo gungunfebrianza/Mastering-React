@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>The Colorizer!</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+    <style>
+      #container {
+        padding: 50px;
+        background-color: #fff;
+      }
+
+      .colorSquare {
+        box-shadow: 0px 0px 25px 0px #333;
+        width: 242px;
+        height: 242px;
+        margin-bottom: 15px;
+      }
+
+      .colorArea input {
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #ccc;
+      }
+
+      .colorArea button {
+        padding: 10px;
+        font-size: 16px;
+        margin: 10px;
+        background-color: #666;
+        color: #fff;
+        border: 2px solid #666;
+      }
+
+      .colorArea button:hover {
+        background-color: #111;
+        border-color: #111;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container"></div>
+    <script type="text/babel">
+
+    
+      class Colorizer extends React.Component {
+        constructor(props) {
+          super(props);
+
+          this.state = {
+            color: '',
+            bgColor: 'white'
+          };
+
+          this.colorValue = this.colorValue.bind(this);
+          this.setNewColor = this.setNewColor.bind(this);
+        }
+
+        colorValue(e) {
+          this.setState({
+            color: e.target.value
+          });
+        }
+
+        setNewColor(e) {
+          this.setState({
+            bgColor: this.state.color
+          });
+
+          e.preventDefault();
+        }
+
+        render() {
+          var squareStyle = {
+            backgroundColor: this.state.bgColor
+          };
+
+          return (
+            <div className="colorArea">
+              <div style={squareStyle} className="colorSquare" />
+              <form onSubmit={this.setNewColor}>
+                <input
+                  onChange={this.colorValue}
+                  placeholder="Enter a color value"
+                />
+                <button type="submit">go</button>
+              </form>
+            </div>
+          );
+        }
+      }
+
+      ReactDOM.render(
+        <div>
+          <Colorizer />
+        </div>,
+        document.querySelector('#container')
+      );
+    </script>
+  </body>
+</html>
