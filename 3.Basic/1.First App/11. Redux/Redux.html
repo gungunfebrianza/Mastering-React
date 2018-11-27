@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Favorite Colors!</title>
+    <script src="https://unpkg.com/redux@latest/dist/redux.js"></script>
+  </head>
+
+  <body>
+    <script>
+      function addColor(value) {
+        return {
+          type: 'ADD',
+          color: value
+        };
+      }
+
+      function removeColor(value) {
+        return {
+          type: 'REMOVE',
+          color: value
+        };
+      }
+    </script>
+  </body>
+</html>
