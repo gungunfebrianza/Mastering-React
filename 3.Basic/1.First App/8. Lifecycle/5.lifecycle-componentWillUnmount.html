@@ -76,6 +76,12 @@
           console.log('componentDidUpdate: Component just updated!');
         }
 
+        componentWillUnmount() {
+          console.log(
+            'componentWillUnmount: Component is about to be removed from the DOM!'
+          );
+        }
+
         shouldComponentUpdate(newProps, newState) {
           console.log('shouldComponentUpdate: Should component update?');
           if (newState.count < 5) {
