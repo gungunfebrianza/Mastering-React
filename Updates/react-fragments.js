@@ -1,13 +1,4 @@
-// Example 1: Using empty tags <></>
-render() {
-  return (
-    <>
-      <ComponentA />
-      <ComponentB />
-      <ComponentC />
-    </>
-  );
-}
+
 
 // Example 2: Using React.Fragment
 render() {
