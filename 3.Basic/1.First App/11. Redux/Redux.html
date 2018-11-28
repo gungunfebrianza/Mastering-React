@@ -38,6 +38,12 @@
       }
 
       var store = Redux.createStore(favoriteColors);
+      
+      store.subscribe(render);
+      //In real world scenarios, you will want to be notified each time our application's state has been modified. This push model makes our lives much easier if we want to update UI or perform other tasks as a result of some change to our store.
+      function render() {
+        console.log(store.getState());
+      }
 
       store.dispatch(addColor('blue'));
       store.dispatch(addColor('yellow'));
