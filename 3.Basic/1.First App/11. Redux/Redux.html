@@ -38,6 +38,18 @@
       }
 
       var store = Redux.createStore(favoriteColors);
+
+      store.dispatch(addColor('blue'));
+      store.dispatch(addColor('yellow'));
+      store.dispatch(addColor('green'));
+      store.dispatch(addColor('red'));
+      store.dispatch(addColor('gray'));
+      store.dispatch(addColor('orange'));
+      store.dispatch(removeColor('gray'));
+      //Each dispatch call sends an action to our reducer. Our reducer takes the action and performs the appropriate work to define our new state.
+
+      //To see our Store's current state
+      console.log(store.getState());
     </script>
   </body>
 </html>
