@@ -20,6 +20,24 @@
           color: value
         };
       }
+
+      function favoriteColors(state, action) {
+        if (state === undefined) {
+          state = [];
+        }
+
+        if (action.type === 'ADD') {
+          return state.concat(action.color);
+        } else if (action.type === 'REMOVE') {
+          return state.filter(function(item) {
+            return item !== action.color;
+          });
+        } else {
+          return state;
+        }
+      }
+
+      
     </script>
   </body>
 </html>
