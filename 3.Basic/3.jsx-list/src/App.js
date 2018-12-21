@@ -25,7 +25,7 @@ class App extends Component {
       <div>
         {list.map(function(item) {
           return (
-            <div>
+            <div key={item.objectId}>
               <h1>{item.title}</h1>
               <p>{item.author}</p>
             </div>
