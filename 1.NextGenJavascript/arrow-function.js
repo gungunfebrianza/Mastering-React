@@ -1,10 +1,15 @@
-const multiply = (number) => {
-  return number * 2;
-}
-console.log(multiply(2));
+// Old Way
 
-const callMe = name => {
-  console.log(name);
-}
+// function(item) {
+//   item.name
+// }
 
-console.log(callMe("test"));
+// ES 6 Arrow Function
+
+// item => {
+//   item.name
+// }
+
+// ES 6 Optimized Arrow Function
+
+// item => item.name
