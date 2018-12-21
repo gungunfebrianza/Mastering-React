@@ -14,7 +14,7 @@ const Button = props => {
     }
   };
   return (
-    <button className={displayClasses(props.type)}>
+    <button className={(props.type)}>
       {props.title + ` ${props.type}`}
     </button>
   );
