@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'roboto';
+  font-family: 'Roboto';
   color: #313131;
 }
 
@@ -9,6 +9,10 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+/*======================================
+                HEADER
+========================================*/
 
 header,
 footer {
@@ -18,6 +22,10 @@ footer {
   font-size: 22px;
   padding: 10px 0;
 }
+
+/*======================================
+                LATEST
+========================================*/
 
 .home-latest {
   box-sizing: border-box;
@@ -29,12 +37,10 @@ footer {
   background-size: cover !important;
   height: 200px;
 }
-
 .home-latest .item .description {
   position: absolute;
   bottom: 0px;
 }
-
 .home-latest .item .description span {
   background: #00bcd4;
   padding: 10px;
@@ -50,9 +56,13 @@ footer {
   font-family: Roboto;
   font-weight: 700;
   color: #fff;
-  background: rgba(53, 53, 53, 0.64);
-  width: 50%;
+  background: rgba(55, 55, 55, 0.51);
+  width: 40%;
 }
+
+/*======================================
+                OTHER NEWS
+========================================*/
 
 .other-news {
   box-sizing: border-box;
@@ -109,6 +119,9 @@ footer {
   font-size: 12px;
   color: #607d8b;
 }
+/*======================================
+             HOME GALLERY
+========================================*/
 
 .home-gallery {
   text-align: left;
