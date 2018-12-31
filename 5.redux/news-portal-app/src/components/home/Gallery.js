@@ -1,7 +1,6 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
-
 
 const settings = {
   dots: false,
@@ -12,35 +11,40 @@ const settings = {
 };
 
 const showGallery = ({ latestGallery }) => {
-  console.log(latestGallery)
+  console.log(latestGallery);
   if (latestGallery) {
     return (
       <Slider {...settings}>
-        {latestGallery.map((item) => {
+        {latestGallery.map(item => {
           return (
-            <Link to={`/galleries/${item.id}`}
+            <Link
+              to={`/galleries/${item.id}`}
               key={item.id}
-              className="slider-item">
-              <div className="image" style={{ background: `url(/images/galleries/${item.images[0].img})` }}>
+              className="slider-item"
+            >
+              <div
+                className="image"
+                style={{
+                  background: `url(/images/galleries/${item.images[0].img})`
+                }}
+              >
                 <h3>{item.artist}</h3>
               </div>
             </Link>
-          )
+          );
         })}
       </Slider>
-    )
+    );
   }
-}
+};
 
-
-const Gallery = (props) => {
+const Gallery = props => {
   return (
     <div className="home-gallery">
       <h2>Awesome Galleries</h2>
       {showGallery(props)}
     </div>
-
-  )
-}
+  );
+};
 
 export default Gallery;
